@@ -56,3 +56,36 @@ print(string3.strip(".")) # . 삭제
 
 
 print("I have a {}, I have an {}".format("pen", "apple"))
+
+interest = 0.087
+print(format(interest, ".2f"))
+
+location = ["서울시", "경기도", "인천시"]
+print(location)
+
+location.append("대전시")
+print(location)
+
+print(location[1:3])
+
+location.remove("경기도")
+print(location)
+
+del location[0]
+print(location)
+
+a = list()
+print(a)
+
+a.insert(0, "경상남도")
+print(a)
+
+numbers = [2, 1, 4, 3]
+numbers.sort()
+print(numbers)
+
+numbers.reverse()
+print(numbers)
+
+python_is_easy = "python is easy"
+print(python_is_easy.split())
