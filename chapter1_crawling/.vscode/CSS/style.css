@@ -1,0 +1,10 @@
+td{ 
+    font-size: 2em;
+    font-family: Gulim;
+    text-align: center;
+}
+.highlight{ /* 설정에 이름을 지정하여 html 파일에서 자유롭게 가져다 씀*/
+    font-size: 3em;
+    text-align: right;
+    color: blue;
+}

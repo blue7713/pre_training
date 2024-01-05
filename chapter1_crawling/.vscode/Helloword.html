@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> <!--글자 깨짐 방지-->
+        <title>HTML test</title>
+        <link rel="stylesheet" type="text/CSS" href="CSS/style.css">
+
+        <!-- <style type="text/CSS"> /* head에 포함시켜 이후 모든 td에 대해 기본 설정으로 적용*/
+            td{ 
+                font-size: 2em;
+                font-family: Gulim;
+                text-align: center;
+            } -->
+        <!-- </style> -->
+    </head>
+    <body>
+        <b>안녕하세요</b><br> <!--br : 줄바꿈-->
+        <img src="naver_webtoon.jpg", id="asd">
+
+        <table border="1" width="500"> <!-- border의 기본값은 0이므로 표시가 없음-->
+            <thead> <!-- head의 표-->
+                <tr> <!-- 행 정의-->
+                    <th>title1</th> <!-- head에서의 행 안의 열 -->
+                    <th>title2</th>
+                </tr>
+            </thead>
+            <tbody> <!-- 본문 내용 -->
+                <tr>
+                    <td class="highlight">안녕1</td> <!-- 행 안의 열--><!-- css파일에 저장된 설정을 class로 가져옴 -->
+                    <td style="text-align: right">안녕2</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </body>
+</html>
