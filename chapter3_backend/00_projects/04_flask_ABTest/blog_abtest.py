@@ -13,18 +13,22 @@ import datetime
 app = Flask(__name__, static_url_path='/static')
 # app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 CORS(app)
+# script태그안의 타 사이트의 url정보도 사용할 수 있도록 허용 
 app.secret_key = 'dave_server1'
+# app.secret_key = os.urandom(24) # 보안을 위해 서버를 켤 때 랜덤한 키를 생성
+# 이 경우 서버를 다시 켜면 기존의 session 정보(동일한 사용자들 정보)는 재사용 불가
 
 app.register_blueprint(blog.blog_abtest, url_prefix='/blog')
+# 다른 파일들끼리 연결시켜 주기 위한 blueprint
 
 # User session management setup
-login_manager = LoginManager()
+login_manager = LoginManager() # 세션 생성
 login_manager.init_app(app)
-login_manager.session_protection = "strong"
+login_manager.session_protection = "strong" #보안 설정
 
 
-@login_manager.user_loader
-def load_user(user_id):
+@login_manager.user_loader # user_id 기반 사용자 객체 리턴 함수  
+def load_user(user_id): # 내가 만든 user Class를 기반으로 만들어 주어야 함
     return User.get(user_id)
 
 

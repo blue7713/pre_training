@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/login')
 def login():
-    username = request.args.get('user_name')
+    username = request.args.get('user_name') 
     passwd = request.args.get('pw')
     email = request.args.get('email_address')
     print (username, passwd, email)
